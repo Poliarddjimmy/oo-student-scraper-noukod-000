@@ -5,9 +5,11 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    self.name = student_hash[:name]
-    self.location = student_hash[:location] 
-    self.profile_url = student_hash[:profile_url] 
+    #self.name = student_hash[:name]
+    #self.location = student_hash[:location] 
+    #self.profile_url = student_hash[:profile_url] 
+    
+    send("#{attribute}=", value)
     
     @@all << self
   end
